@@ -1,0 +1,12 @@
+@use "./base/base";
+@use "./base/reset";
+@use "./base/typography";
+
+@use "./abstracts/colors";
+@use "./abstracts/variables";
+
+@use "./components/navigation";
+@use "./components/slider";
+
+@use "./sections/main";
+@use "./sections/about";

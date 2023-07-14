@@ -1,0 +1,21 @@
+@use "../abstracts/colors" as *;
+
+.navigation {
+    color: $dark-100;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1rem;
+    }
+
+    .navigation-items {
+        gap: 4em;
+    }
+
+    .contact-button {
+        background-color: $light-90;
+        border-radius: 4em;
+        padding: 1.2em 3.38em;
+    }
+}

@@ -1,0 +1,61 @@
+@use "../abstracts/colors" as *;
+
+.about-section {
+    display: flex;
+    height: 38.25em;
+
+    .about-text {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        gap: 2em;
+        padding: 3em 5em;
+
+        h3 {
+            width: 40em;
+            color: $dark-80;
+            font-size: 1.25em;
+            font-weight: 200;
+            line-height: 155%;
+        }
+    }
+
+    .flex-column {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-left: 1px solid $dark-80;
+
+        .info {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+
+            gap: 1em;
+            padding: 1.5em;
+
+            h1 {
+                font-size: 12.5em;
+                font-weight: 500;
+                letter-spacing: -16px;
+                text-transform: uppercase;
+            }
+
+            p {
+                padding: 0 1em;
+                font-size: 1.25em;
+                font-weight: 400;
+                line-height: 155%;
+                color: $dark-80;
+            }
+        }
+
+        .img {
+            flex: 1;
+            border-top: 1px solid var(--dark-100, #000);
+            background: url("../assets/about-img.png") lightgray no-repeat;
+        }
+    }
+}

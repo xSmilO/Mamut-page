@@ -1,7 +1,15 @@
-import Main_page from "./Main/MainPage";
+import Slider from "./components/Slider";
+import AboutSection from "./sections/AboutSection";
+import MainSection from "./sections/MainSection";
 
 function App() {
-    return <Main_page />;
+    return (
+        <div>
+            <MainSection />
+            <AboutSection />
+            <Slider />
+        </div>
+    );
 }
 
 export default App;

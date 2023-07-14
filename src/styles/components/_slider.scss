@@ -1,0 +1,80 @@
+@use "../abstracts/colors" as *;
+
+.slider-container {
+    background-color: $accent-blue;
+    overflow: hidden;
+    .slider {
+        display: flex;
+        align-items: center;
+        height: 7em;
+        gap: 4em;
+        animation: slider 30s linear infinite;
+
+        .slider-item {
+            display: flex;
+            align-items: center;
+            gap: 3em;
+            min-width: max-content;
+            color: $dark-100;
+            text-transform: uppercase;
+            font-size: 1.625em;
+            font-weight: 700;
+            // animation: slideAnimation 60s infinite;
+
+            // &:first-child {
+            //     color: blue;
+            //     animation: slideAnimation 60s -60s infinite;
+            // }
+
+            // &:nth-child(2) {
+            //     color: red;
+            //     animation: slideAnimation 60s -40s infinite forwards;
+            // }
+
+            // &:nth-child(3) {
+            //     color: green;
+            //     animation: slideAnimation 60s -20s infinite forwards;
+            // }
+
+            .dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 100%;
+                background-color: $dark-100;
+            }
+        }
+    }
+}
+
+@keyframes slider {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slideAnimation {
+    100% {
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes slideAnimation2 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-200vw);
+    }
+}
+
+@keyframes slideAnimation3 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(-300%);
+    }
+}
