@@ -1,0 +1,104 @@
+@use "../abstracts/colors" as *;
+
+.offer-section {
+    margin-top: 22em;
+
+    .header {
+        padding: 0 19em;
+        padding-bottom: 2.5em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h2 {
+            font-size: 4.375em;
+            font-weight: 500;
+            letter-spacing: -0.03em;
+            text-transform: uppercase;
+        }
+
+        .contact {
+            display: flex;
+
+            p {
+                padding: 1.3em 2.8em;
+                border-radius: 4.3em;
+                border: 1px solid $dark-100;
+            }
+
+            .arrow-btn {
+                background-color: $dark-100;
+                padding: 1.3em 2.8em;
+                border-radius: 4em;
+
+                svg {
+                    path {
+                        fill: $light-100;
+                    }
+                }
+            }
+        }
+    }
+
+    .offers {
+        .offer {
+            padding: 9em 0em;
+            padding-left: 19em;
+            display: flex;
+            // justify-content: space-between;
+            align-items: start;
+            border-top: 1px solid $dark-100;
+            border-bottom: 1px solid $dark-100;
+
+            h3 {
+                font-size: 2.75em;
+                font-weight: 500;
+                letter-spacing: -0.05em;
+                position: relative;
+                min-width: 50%;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 0.3em;
+                    height: 0.3em;
+                    bottom: -0.8em;
+                    border-radius: 100%;
+                }
+            }
+
+            .offer-info {
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                font-size: 1.25em;
+                font-weight: 300;
+                color: $dark-100;
+            }
+        }
+
+        .offer:nth-child(1) {
+            h3 {
+                &::after {
+                    background-color: $accent-yellow;
+                }
+            }
+        }
+
+        .offer:nth-child(2) {
+            h3 {
+                &::after {
+                    background-color: $accent-blue;
+                }
+            }
+        }
+
+        .offer:nth-child(3) {
+            h3 {
+                &::after {
+                    background-color: $accent-purple;
+                }
+            }
+        }
+    }
+}

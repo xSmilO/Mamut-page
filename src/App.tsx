@@ -1,6 +1,9 @@
 import Slider from "./components/Slider";
 import AboutSection from "./sections/AboutSection";
+import ContactSection from "./sections/ContactSection";
 import MainSection from "./sections/MainSection";
+import OfferSection from "./sections/OfferSection";
+import PortfolioSection from "./sections/PortfolioSection";
 
 function App() {
     return (
@@ -8,6 +11,9 @@ function App() {
             <MainSection />
             <AboutSection />
             <Slider />
+            <OfferSection />
+            <PortfolioSection />
+            <ContactSection />
         </div>
     );
 }

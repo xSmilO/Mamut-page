@@ -1,0 +1,118 @@
+@use "../abstracts/colors" as *;
+
+.portfolio-section {
+    display: flex;
+    flex-direction: column;
+
+    .placeholder {
+        padding: 25em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 2em;
+
+        h2 {
+            color: $dark-100;
+            font-size: 3.75em;
+            font-weight: 500;
+            letter-spacing: -0.04em;
+
+            &:last-child {
+                color: $accent-purple;
+            }
+        }
+    }
+
+    .description {
+        background-color: $dark-100;
+        padding: 5em 8em;
+        p {
+            color: $light-90;
+            text-transform: uppercase;
+            font-size: 4.375em;
+            font-weight: 500;
+            letter-spacing: -0.04em;
+        }
+    }
+
+    .container {
+        display: flex;
+
+        div {
+            height: 74em;
+        }
+        .image {
+            width: 50%;
+            flex-shrink: 0;
+            display: flex;
+            overflow: hidden;
+            background: url("../assets/main-bg.jpg"), lightgray no-repeat;
+            background-position-x: 80%;
+            background-position-y: 70%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                align-self: flex-start;
+                animation: waving 1s ease-in-out infinite alternate;
+            }
+        }
+
+        .product-info {
+            width: 50%;
+            background-color: $accent-blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .product-container {
+                gap: 2em;
+                width: 80%;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid $dark-100;
+                border-radius: 100%;
+
+                p {
+                    font-size: 2em;
+                    font-weight: 500;
+                    letter-spacing: -0.04em;
+                    color: $dark-100;
+                }
+
+                h3 {
+                    font-size: 6.25em;
+                    font-weight: 700;
+                    letter-spacing: -0.03em;
+                }
+
+                button {
+                    background-color: transparent;
+                    outline: none;
+                    border: 1px solid $dark-100;
+                    border-radius: 3.6em;
+                    display: flex;
+                    gap: 1.25em;
+                    align-items: center;
+                    padding: 1em 2.5em;
+                    font-size: 1.25em;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+@keyframes waving {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, 2em);
+    }
+}

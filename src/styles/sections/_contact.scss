@@ -1,0 +1,29 @@
+@use "../abstracts/colors" as *;
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1em;
+    padding: 8em 20em;
+
+    h3 {
+        font-size: 3em;
+        font-weight: 500;
+        letter-spacing: -0.04em;
+    }
+
+    button {
+        font-size: 1.25em;
+        color: $light-100;
+        background-color: $dark-100;
+        padding: 1em 4.3em;
+        border-radius: 4.4em;
+        transition: background-color 200ms;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $accent-purple;
+        }
+    }
+}

@@ -7,6 +7,10 @@
 
 @use "./components/navigation";
 @use "./components/slider";
+@use "./components/arrow-btn";
 
 @use "./sections/main";
 @use "./sections/about";
+@use "./sections/offer";
+@use "./sections/portfolio";
+@use "./sections/contact";

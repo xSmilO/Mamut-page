@@ -3,6 +3,9 @@
 .slider-container {
     background-color: $accent-blue;
     overflow: hidden;
+    border-top: 1px solid $dark-100;
+    border-bottom: 1px solid $dark-100;
+
     .slider {
         display: flex;
         align-items: center;
@@ -19,22 +22,6 @@
             text-transform: uppercase;
             font-size: 1.625em;
             font-weight: 700;
-            // animation: slideAnimation 60s infinite;
-
-            // &:first-child {
-            //     color: blue;
-            //     animation: slideAnimation 60s -60s infinite;
-            // }
-
-            // &:nth-child(2) {
-            //     color: red;
-            //     animation: slideAnimation 60s -40s infinite forwards;
-            // }
-
-            // &:nth-child(3) {
-            //     color: green;
-            //     animation: slideAnimation 60s -20s infinite forwards;
-            // }
 
             .dot {
                 width: 10px;
@@ -52,29 +39,5 @@
     }
     100% {
         transform: translateX(-100%);
-    }
-}
-
-@keyframes slideAnimation {
-    100% {
-        transform: translateX(-100vw);
-    }
-}
-
-@keyframes slideAnimation2 {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-200vw);
-    }
-}
-
-@keyframes slideAnimation3 {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(-300%);
     }
 }

@@ -17,5 +17,13 @@
         background-color: $light-90;
         border-radius: 4em;
         padding: 1.2em 3.38em;
+        transition-property: background-color, color;
+        transition: 600ms;
+        cursor: pointer;
+
+        &:hover {
+            color: $light-100;
+            background-color: $accent-purple;
+        }
     }
 }
