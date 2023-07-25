@@ -6,13 +6,13 @@
     }
 
     @if ($breakpoint == small) {
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 40rem) {
             @content;
         }
     }
 
     @if ($breakpoint == medium) {
-        @media only screen and (min-width: 768px) {
+        @media only screen and (max-width: 64rem) {
             @content;
         }
     }

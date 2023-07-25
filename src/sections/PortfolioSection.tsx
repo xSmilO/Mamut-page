@@ -15,7 +15,7 @@ function PortfolioSection() {
             <div className="container">
                 <div className="image">
                     <img
-                        src="./src/assets/mrowka-better.png"
+                        src="./src/assets/mrowka-img-small.png"
                         alt="product image"
                     />
                 </div>

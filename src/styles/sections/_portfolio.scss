@@ -7,7 +7,7 @@
     flex-direction: column;
 
     .placeholder {
-        padding: 25em;
+        padding: min(25em, 20vw);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -67,24 +67,43 @@
                 aspect-ratio: 0.8;
             }
         }
+
         .image {
             // width: 50%;
-            flex-shrink: 0;
-            display: flex;
             overflow: hidden;
+            position: relative;
             background: url("../assets/main-bg.jpg"), lightgray no-repeat;
             background-position-x: 80%;
             background-position-y: 70%;
+            // min-height: 70rem;
 
             img {
-                width: 100%;
-                height: 100%;
-                // align-self: flex-start;
+                background-color: transparent;
+                position: absolute;
+                width: max(60%, 20rem);
+                right: 0;
+                bottom: -10em;
+
+                box-shadow: -40px 50px 63px -24px rgba(0, 0, 0, 0.8);
+                transform-origin: center;
+
                 animation: waving 5s ease-in-out infinite alternate;
 
-                @include mq(small) {
-                    z-index: 2;
+                @include mq(medium) {
+                    width: max(50%, 16rem);
                 }
+
+                @include mq(small) {
+                    top: -10%;
+                    right: -10%;
+                    width: 70%;
+                }
+            }
+
+            @include mq(small) {
+                min-height: auto;
+                z-index: -1;
+                overflow: visible;
             }
         }
 
@@ -96,6 +115,7 @@
 
             .product-container {
                 gap: 2em;
+                aspect-ratio: 1/1.6;
                 width: 80%;
                 height: 80%;
                 display: flex;
@@ -117,12 +137,12 @@
                 }
 
                 h3 {
-                    font-size: 6.25em;
+                    font-size: min(6.25em, 7vw);
                     font-weight: 700;
                     letter-spacing: -0.03em;
 
                     @include mq(small) {
-                        font-size: 2em;
+                        font-size: min(4em, 10vw);
                     }
                 }
 
@@ -135,11 +155,12 @@
                     gap: 1.25em;
                     align-items: center;
                     padding: 1em 2.5em;
-                    font-size: 1.25em;
+                    // font-size: 1.25em;
+                    font-size: min(1.25em, 1.25vw);
                     font-weight: 400;
 
                     @include mq(small) {
-                        font-size: 0.42em;
+                        font-size: min(2em, 2vw);
                     }
 
                     img {
@@ -152,6 +173,7 @@
 
             @include mq(small) {
                 width: 100%;
+                z-index: -2;
             }
         }
 
@@ -163,10 +185,10 @@
 
 @keyframes waving {
     0% {
-        transform: translate(0, 0);
+        transform: translate(0, 0) rotate(-16deg);
     }
 
     100% {
-        transform: translate(0, 2em);
+        transform: translate(0, 2em) rotate(-16deg);
     }
 }

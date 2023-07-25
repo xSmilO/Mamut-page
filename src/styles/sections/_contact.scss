@@ -3,6 +3,7 @@
 @use "../abstracts/variables" as *;
 
 .contact-section {
+    background-color: $light-100;
     display: flex;
     flex-direction: column;
     align-items: start;
