@@ -12,7 +12,12 @@
         align-items: center;
         height: 7em;
         gap: 4em;
+
         animation: slider 10s linear infinite;
+
+        @include mq(small) {
+            animation: sliderMobile 20s linear infinite;
+        }
 
         .slider-item {
             display: flex;
@@ -53,6 +58,15 @@
         transform: translateX(100%);
     }
     100% {
-        transform: translateX(-250%);
+        transform: translateX(-2100%);
+    }
+}
+
+@keyframes sliderMobile {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-200%);
     }
 }
