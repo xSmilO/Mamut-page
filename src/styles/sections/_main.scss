@@ -1,5 +1,6 @@
 @use "../abstracts/colors" as *;
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .main-section {
     display: flex;
@@ -23,6 +24,16 @@
         .hero-text {
             font-size: 1.5em;
             line-height: 1.875rem;
+
+            @include mq(small) {
+                font-size: 1em;
+                line-height: 1.3125rem;
+            }
+        }
+
+        @include mq(small) {
+            padding: 2em $sections-padding-x-small;
+            background-position-x: 10%;
         }
     }
 
@@ -40,6 +51,12 @@
             font-size: 4.625rem;
             letter-spacing: -0.32375rem;
             font-weight: 500;
+
+            @include mq(small) {
+                font-size: 2.56em;
+                letter-spacing: -0.0179em;
+                line-height: 94%;
+            }
         }
 
         p {
@@ -54,16 +71,28 @@
         }
 
         .info {
+            display: flex;
             justify-content: space-between;
             align-items: start;
             .buttons {
+                display: flex;
                 align-items: center;
                 p {
                     padding: 1.25em 3.25em 1.3125em 3.25em;
                     border-radius: 4.3125rem;
                     border: 1px solid $light-90;
                 }
+
+                @include mq(small) {
+                    display: none;
+                }
             }
+        }
+
+        @include mq(small) {
+            padding: $sections-padding-x-small;
+            padding-bottom: 4em;
+            height: auto;
         }
     }
 }

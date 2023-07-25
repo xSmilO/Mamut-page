@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Slider from "./components/Slider";
 import AboutSection from "./sections/AboutSection";
 import ContactSection from "./sections/ContactSection";
@@ -14,6 +15,7 @@ function App() {
             <OfferSection />
             <PortfolioSection />
             <ContactSection />
+            <Footer />
         </div>
     );
 }

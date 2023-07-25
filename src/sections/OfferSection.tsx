@@ -8,8 +8,8 @@ function OfferSection() {
                     <button className="arrow-btn">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            width="38"
-                            height="8"
+                            width="30"
+                            height="10"
                             viewBox="0 0 38 8"
                             fill="none"
                         >

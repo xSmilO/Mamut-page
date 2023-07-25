@@ -1,4 +1,6 @@
 @use "../abstracts/colors" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
 
 .portfolio-section {
     display: flex;
@@ -21,6 +23,14 @@
             &:last-child {
                 color: $accent-purple;
             }
+
+            @include mq(small) {
+                font-size: 1.375em;
+            }
+        }
+
+        @include mq(small) {
+            padding: 16em $sections-padding-x-small;
         }
     }
 
@@ -33,6 +43,14 @@
             font-size: 4.375em;
             font-weight: 500;
             letter-spacing: -0.04em;
+
+            @include mq(small) {
+                font-size: 1.875em;
+            }
+        }
+
+        @include mq(small) {
+            padding: 4em $sections-padding-x-small;
         }
     }
 
@@ -40,10 +58,17 @@
         display: flex;
 
         div {
-            height: 74em;
+            // height: 74em;
+            // aspect-ratio: 0.5;
+            width: 50%;
+            @include mq(small) {
+                width: 100%;
+                // height: 26em;
+                aspect-ratio: 0.8;
+            }
         }
         .image {
-            width: 50%;
+            // width: 50%;
             flex-shrink: 0;
             display: flex;
             overflow: hidden;
@@ -54,13 +79,16 @@
             img {
                 width: 100%;
                 height: 100%;
-                align-self: flex-start;
-                animation: waving 1s ease-in-out infinite alternate;
+                // align-self: flex-start;
+                animation: waving 5s ease-in-out infinite alternate;
+
+                @include mq(small) {
+                    z-index: 2;
+                }
             }
         }
 
         .product-info {
-            width: 50%;
             background-color: $accent-blue;
             display: flex;
             justify-content: center;
@@ -82,12 +110,20 @@
                     font-weight: 500;
                     letter-spacing: -0.04em;
                     color: $dark-100;
+
+                    @include mq(small) {
+                        font-size: 0.67em;
+                    }
                 }
 
                 h3 {
                     font-size: 6.25em;
                     font-weight: 700;
                     letter-spacing: -0.03em;
+
+                    @include mq(small) {
+                        font-size: 2em;
+                    }
                 }
 
                 button {
@@ -101,8 +137,26 @@
                     padding: 1em 2.5em;
                     font-size: 1.25em;
                     font-weight: 400;
+
+                    @include mq(small) {
+                        font-size: 0.42em;
+                    }
+
+                    img {
+                        @include mq(small) {
+                            width: 2em;
+                        }
+                    }
                 }
             }
+
+            @include mq(small) {
+                width: 100%;
+            }
+        }
+
+        @include mq(small) {
+            flex-direction: column-reverse;
         }
     }
 }

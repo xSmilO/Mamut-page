@@ -1,4 +1,5 @@
 @use "../abstracts/colors" as *;
+@use "../abstracts/mixins" as *;
 
 .slider-container {
     background-color: $accent-blue;
@@ -11,7 +12,7 @@
         align-items: center;
         height: 7em;
         gap: 4em;
-        animation: slider 30s linear infinite;
+        animation: slider 10s linear infinite;
 
         .slider-item {
             display: flex;
@@ -28,7 +29,21 @@
                 height: 10px;
                 border-radius: 100%;
                 background-color: $dark-100;
+
+                @include mq(small) {
+                    width: 6px;
+                    height: 6px;
+                }
             }
+
+            @include mq(small) {
+                font-size: 0.65em;
+            }
+        }
+
+        @include mq(small) {
+            height: 4em;
+            gap: 2em;
         }
     }
 }
@@ -38,6 +53,6 @@
         transform: translateX(100%);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-250%);
     }
 }

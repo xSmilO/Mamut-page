@@ -1,29 +1,49 @@
 @use "../abstracts/colors" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
 
 .contact-section {
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 1em;
-    padding: 8em 20em;
+    gap: 2.25em;
+    padding: 8em 25em;
+    border-bottom: 1px solid $dark-100;
+    border-top: 1px solid $dark-100;
 
     h3 {
         font-size: 3em;
         font-weight: 500;
         letter-spacing: -0.04em;
+        width: clamp(10ch, 20em, 70vw);
+
+        @include mq(small) {
+            font-size: 1.97em;
+        }
     }
 
     button {
         font-size: 1.25em;
+        font-weight: 600;
         color: $light-100;
         background-color: $dark-100;
-        padding: 1em 4.3em;
+        padding: 1em 4em;
         border-radius: 4.4em;
-        transition: background-color 200ms;
+        transition: background-color 400ms;
         cursor: pointer;
 
         &:hover {
             background-color: $accent-purple;
         }
+
+        @include mq(small) {
+            font-size: 0.55em;
+            padding: 2em 4em;
+        }
+    }
+
+    @include mq(small) {
+        padding: 6em $sections-padding-x-small;
+        gap: 2em;
     }
 }

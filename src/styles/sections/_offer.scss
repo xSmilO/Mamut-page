@@ -1,4 +1,6 @@
 @use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .offer-section {
     margin-top: 22em;
@@ -14,6 +16,10 @@
             font-weight: 500;
             letter-spacing: -0.03em;
             text-transform: uppercase;
+
+            @include mq(small) {
+                font-size: 1.625em;
+            }
         }
 
         .contact {
@@ -23,12 +29,37 @@
                 padding: 1.3em 2.8em;
                 border-radius: 4.3em;
                 border: 1px solid $dark-100;
+                text-transform: uppercase;
+                transition: all 300ms ease;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $dark-100;
+                    color: $light-100;
+                }
+
+                @include mq(small) {
+                    font-size: 0.675rem;
+                    padding: 1.3em 3em;
+                }
             }
 
             .arrow-btn {
                 background-color: $dark-100;
-                padding: 1.3em 2.8em;
-                border-radius: 4em;
+                border: 1px solid $dark-100;
+                cursor: pointer;
+                transition: all 300ms ease;
+                padding: 1em 1.5em;
+
+                &:hover {
+                    background-color: $light-100;
+
+                    svg {
+                        path {
+                            fill: $dark-100;
+                        }
+                    }
+                }
 
                 svg {
                     path {
@@ -36,6 +67,10 @@
                     }
                 }
             }
+        }
+
+        @include mq(small) {
+            padding: $sections-padding-x-small;
         }
     }
 
@@ -64,6 +99,14 @@
                     height: 0.3em;
                     bottom: -0.8em;
                     border-radius: 100%;
+
+                    // @include mq(small) {
+                    //     bottom: -0.5em;
+                    // }
+                }
+
+                @include mq(small) {
+                    font-size: 1.125em;
                 }
             }
 
@@ -73,7 +116,17 @@
                 gap: 1em;
                 font-size: 1.25em;
                 font-weight: 300;
-                color: $dark-100;
+                color: $dark-80;
+
+                @include mq(small) {
+                    font-size: 0.75em;
+                }
+            }
+
+            @include mq(small) {
+                padding: 2.25em $sections-padding-x-small;
+                flex-direction: column;
+                gap: 2em;
             }
         }
 
@@ -100,5 +153,9 @@
                 }
             }
         }
+    }
+
+    @include mq(small) {
+        margin-top: 3em;
     }
 }
