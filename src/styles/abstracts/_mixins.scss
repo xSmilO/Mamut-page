@@ -1,0 +1,31 @@
+@mixin mq($breakpoint) {
+    @if ($breakpoint == extra_small) {
+        @media only screen and (max-width: 378px) {
+            @content;
+        }
+    }
+
+    @if ($breakpoint == small) {
+        @media only screen and (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @if ($breakpoint == medium) {
+        @media only screen and (min-width: 768px) {
+            @content;
+        }
+    }
+
+    @if ($breakpoint == large) {
+        @media only screen and (min-width: 992px) {
+            @content;
+        }
+    }
+
+    @if ($breakpoint == extra_large) {
+        @media only screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+}

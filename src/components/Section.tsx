@@ -3,14 +3,14 @@ function Section() {
         <section>
             <p>2023</p>
             <div className="line" />
-            <div className="flex-row info">
+            <div className="info">
                 <h1>
                     Dobry biznes <br />
                     jest wart <br />
                     dobrej strony.
                 </h1>
 
-                <div className="flex-row buttons">
+                <div className="buttons">
                     <p>Portfolio</p>
                     <button className="arrow-btn">
                         <img

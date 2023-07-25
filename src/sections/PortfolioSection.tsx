@@ -3,7 +3,7 @@ function PortfolioSection() {
         <section className="portfolio-section">
             <div className="placeholder">
                 <h2>Tworzymy strony www, które</h2>
-                <h2>kilka opcji do zmiany</h2>
+                <h2>przyciągają uwagę i angażują użytkowników.</h2>
             </div>
             <div className="description">
                 <p>

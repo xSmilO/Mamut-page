@@ -1,12 +1,79 @@
 @use "../abstracts/colors" as *;
+@use "../abstracts/mixins" as *;
 
 .navigation {
     color: $dark-100;
+    .nav-btn {
+        cursor: pointer;
+        display: none;
+        top: 3em;
+        right: 3em;
+        width: 1.5em;
+        height: 1.5em;
+
+        &.close {
+            z-index: 10;
+            position: fixed;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        @include mq(small) {
+            display: block;
+            position: absolute;
+        }
+    }
+
     ul {
         display: flex;
         justify-content: space-between;
         align-items: center;
         font-size: 1rem;
+
+        &.mobile {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 5;
+
+            .navigation-items {
+                gap: 1.3em;
+                font-size: 1.4375rem;
+                letter-spacing: -0.01438rem;
+                font-weight: 500;
+            }
+        }
+
+        @include mq(small) {
+            display: none;
+
+            &.mobile {
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                display: flex;
+                top: 0;
+                left: 0;
+                background-color: white;
+                border-radius: 50%;
+                transform: translateX(100%);
+                transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                &.show {
+                    border-radius: 0;
+                    transform: translateX(0);
+                }
+            }
+        }
     }
 
     .navigation-items {

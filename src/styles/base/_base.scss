@@ -4,16 +4,12 @@
     font-size: 15px;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 button {
     background-color: transparent;
     outline: none;
     border: none;
-}
-
-.relative {
-    position: relative;
-}
-
-.flex-row {
-    display: flex;
 }
