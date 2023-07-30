@@ -3,7 +3,7 @@
 
 footer {
     display: flex;
-    padding: 8em 24em;
+    padding: 8em min(24em, 20vw);
     gap: 10em;
 
     div {

@@ -6,18 +6,19 @@
     overflow: hidden;
     border-top: 1px solid $dark-100;
     border-bottom: 1px solid $dark-100;
+    height: 7em;
 
     .slider {
         display: flex;
         align-items: center;
         height: 7em;
-        gap: 4em;
+        gap: 3rem;
+        position: absolute;
+        background-color: transparent;
 
-        animation: slider 10s linear infinite;
-
-        @include mq(small) {
-            animation: sliderMobile 20s linear infinite;
-        }
+        // @include mq(small) {
+        //     animation: sliderMobile 20s linear infinite;
+        // }
 
         .slider-item {
             display: flex;
@@ -48,25 +49,10 @@
 
         @include mq(small) {
             height: 4em;
-            gap: 2em;
         }
     }
-}
 
-@keyframes slider {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-2100%);
-    }
-}
-
-@keyframes sliderMobile {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-200%);
+    @include mq(small) {
+        height: 4em;
     }
 }

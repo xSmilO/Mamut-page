@@ -11,7 +11,7 @@ function App() {
         <div>
             <MainSection />
             <AboutSection />
-            <Slider />
+            <Slider gap={45} speed={50} />
             <OfferSection />
             <PortfolioSection />
             <ContactSection />
@@ -21,4 +21,3 @@ function App() {
 }
 
 export default App;
-
