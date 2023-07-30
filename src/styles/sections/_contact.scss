@@ -4,8 +4,15 @@
     display: flex;
     flex-direction: column;
     align-items: start;
+<<<<<<< Updated upstream
     gap: 1em;
     padding: 8em 20em;
+=======
+    gap: 2.25em;
+    padding: 8em min(25em, 20vw);
+    border-bottom: 1px solid $dark-100;
+    border-top: 1px solid $dark-100;
+>>>>>>> Stashed changes
 
     h3 {
         font-size: 3em;
@@ -25,5 +32,22 @@
         &:hover {
             background-color: $accent-purple;
         }
+<<<<<<< Updated upstream
+=======
+
+        @include mq(small) {
+            font-size: 0.55em;
+            padding: 2em 4em;
+        }
+    }
+
+    // @include mq(medium) {
+    //     padding: 3em 6em;
+    // }
+
+    @include mq(small) {
+        padding: 6em $sections-padding-x-small;
+        gap: 2em;
+>>>>>>> Stashed changes
     }
 }

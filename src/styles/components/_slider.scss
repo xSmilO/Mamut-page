@@ -5,23 +5,42 @@
     overflow: hidden;
     border-top: 1px solid $dark-100;
     border-bottom: 1px solid $dark-100;
+    display: flex;
+    width: 100vw;
+    height: 7em;
+    align-items: start;
+    justify-content: start;
+    position: relative;
 
     .slider {
-        display: flex;
+        display: inline-flex;
         align-items: center;
+        justify-content: center;
         height: 7em;
+<<<<<<< Updated upstream
         gap: 4em;
         animation: slider 30s linear infinite;
+=======
+        gap: 3rem;
+        position: absolute;
+
+        // animation: slider 10s linear infinite;
+
+        // @include mq(small) {
+        //     animation: sliderMobile 20s linear infinite;
+        // }
+>>>>>>> Stashed changes
 
         .slider-item {
             display: flex;
             align-items: center;
-            gap: 3em;
+            gap: 3rem;
             min-width: max-content;
             color: $dark-100;
             text-transform: uppercase;
             font-size: 1.625em;
             font-weight: 700;
+            // position: absolute;
 
             .dot {
                 width: 10px;
@@ -29,10 +48,21 @@
                 border-radius: 100%;
                 background-color: $dark-100;
             }
+<<<<<<< Updated upstream
+=======
+
+            @include mq(small) {
+                font-size: 0.65em;
+            }
+        }
+
+        @include mq(small) {
+            height: 4em;
+>>>>>>> Stashed changes
         }
     }
-}
 
+<<<<<<< Updated upstream
 @keyframes slider {
     0% {
         transform: translateX(100%);
@@ -41,3 +71,27 @@
         transform: translateX(-100%);
     }
 }
+=======
+    @include mq(small) {
+        height: 4em;
+    }
+}
+
+// @keyframes slider {
+//     0% {
+//         transform: translateX(100%);
+//     }
+//     100% {
+//         transform: translateX(-2100%);
+//     }
+// }
+
+// @keyframes sliderMobile {
+//     0% {
+//         transform: translateX(100%);
+//     }
+//     100% {
+//         transform: translateX(-200%);
+//     }
+// }
+>>>>>>> Stashed changes

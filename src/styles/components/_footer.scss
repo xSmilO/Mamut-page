@@ -1,0 +1,48 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/mixins" as *;
+
+footer {
+    display: flex;
+    padding: 8em min(24em, 20vw);
+    gap: 10em;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        align-items: start;
+
+        p {
+            font-size: 1.45em;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+        }
+
+        a {
+            color: $dark-100;
+
+            @include mq(small) {
+                font-size: 0.875em;
+                font-weight: 500;
+            }
+        }
+
+        @include mq(small) {
+            display: none;
+        }
+
+        @include mq(small) {
+            gap: 1em;
+        }
+    }
+
+    div.mobile {
+        display: flex;
+    }
+
+    @include mq(small) {
+        padding: 4em;
+        justify-content: center;
+        align-items: center;
+    }
+}
