@@ -15,21 +15,22 @@
 
     h3 {
         font-size: 3em;
-        font-weight: 500;
+        font-weight: 400;
         letter-spacing: -0.04em;
         width: clamp(10ch, 20em, 70vw);
 
         @include mq(small) {
-            font-size: 1.97em;
+            font-size: 2.25em;
         }
     }
 
     button {
-        font-size: 1.25em;
+        font-family: "Hanken Grotesk", sans-serif;
+        font-size: 1.5em;
         font-weight: 600;
         color: $light-100;
         background-color: $dark-100;
-        padding: 1em 4em;
+        padding: 0.8em 3.75em;
         border-radius: 4.4em;
         transition: background-color 400ms;
         cursor: pointer;
@@ -39,8 +40,8 @@
         }
 
         @include mq(small) {
-            font-size: 0.55em;
-            padding: 2em 4em;
+            font-size: 0.8em;
+            padding: 1em 4em;
         }
     }
 

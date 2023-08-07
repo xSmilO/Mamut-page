@@ -10,6 +10,8 @@ function Section() {
                     dobrej strony.
                 </h1>
 
+                {/* <div className="spacer" /> */}
+
                 <div className="buttons">
                     <p>Portfolio</p>
                     <button className="arrow-btn">

@@ -3,7 +3,7 @@
 @use "../abstracts/mixins" as *;
 
 .offer-section {
-    margin-top: 22em;
+    margin-top: 15em;
 
     .header {
         padding: 0 12vw;
@@ -12,13 +12,13 @@
         justify-content: space-between;
         align-items: center;
         h2 {
-            font-size: 4.375em;
+            font-size: 5em;
             font-weight: 500;
-            letter-spacing: -0.03em;
+            // letter-spacing: -0em;
             text-transform: uppercase;
 
             @include mq(small) {
-                font-size: 1.625em;
+                font-size: 2.25em;
             }
         }
 
@@ -41,7 +41,7 @@
 
                 @include mq(small) {
                     font-size: 0.675rem;
-                    padding: 1.3em 3em;
+                    padding: 1.6em 3em;
                 }
             }
 
@@ -83,13 +83,16 @@
             display: flex;
             // justify-content: space-between;
             align-items: start;
-            border-top: 1px solid $dark-100;
             border-bottom: 1px solid $dark-100;
 
+            &:first-child {
+                border-top: 1px solid $dark-100;
+            }
+
             h3 {
-                font-size: min(2.75em, 5vw);
-                font-weight: 500;
-                letter-spacing: -0.05em;
+                font-size: min(3em, 5vw);
+                font-weight: 400;
+                letter-spacing: -0.03em;
                 position: relative;
                 min-width: 50%;
 
@@ -107,12 +110,13 @@
                     // }
                 }
 
-                @include mq(small) {
-                    font-size: 1.125em;
-                }
-
                 @include mq(medium) {
                     max-width: 40%;
+                }
+
+                @include mq(small) {
+                    font-size: 1.25em;
+                    max-width: 80%;
                 }
             }
 
