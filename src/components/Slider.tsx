@@ -201,7 +201,14 @@ function Slider({ gap, speed }: SliderProps) {
                 </div>
 
                 <div className="slider-item">
-                    <div className="slider-text">3000zł brutto</div>
+                    <div className="slider-text">
+                        3000zł brutto
+                        {/* <img
+                            src="./src/assets/ellipse.svg"
+                            className="ellipse"
+                            alt=""
+                        /> */}
+                    </div>
                     <div className="dot" />
                 </div>
 

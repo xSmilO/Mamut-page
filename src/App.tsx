@@ -11,7 +11,7 @@ function App() {
         <div>
             <MainSection />
             <AboutSection />
-            <Slider gap={45} speed={50} />
+            <Slider gap={45} speed={30} />
             <OfferSection />
             <PortfolioSection />
             <ContactSection />

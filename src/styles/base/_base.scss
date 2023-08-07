@@ -1,6 +1,7 @@
 :root {
     font-family: "Hanken Grotesk", sans-serif;
     font-weight: 600;
+    font-size: 15px;
 }
 
 html {
@@ -8,11 +9,20 @@ html {
 }
 
 body {
-    overflow-x: hidden;
+    overflow: hidden;
+    position: relative;
 }
 
 button {
     background-color: transparent;
     outline: none;
     border: none;
+}
+
+.cls-1 {
+    fill: none;
+}
+
+.cls-2 {
+    clip-path: url(#clip-path);
 }

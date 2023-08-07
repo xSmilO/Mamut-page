@@ -18,6 +18,9 @@ function PortfolioSection() {
                         src="./src/assets/mrowka-img-small.png"
                         alt="product image"
                     />
+                    {/* <img src="./src/assets/asset_1.svg" alt="product image" />
+                     */}
+                    {/* <image src="./src/assets/asset_2.pdf" type="" /> */}
                 </div>
 
                 <div className="product-info">
