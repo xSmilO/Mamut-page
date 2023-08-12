@@ -1,6 +1,6 @@
 function AboutSection() {
     return (
-        <section className="about-section">
+        <section className="about-section" id="about">
             <h1 className="mobile">O NAS</h1>
 
             <div className="about-text">

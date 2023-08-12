@@ -76,7 +76,7 @@ function Slider({ gap, speed }: SliderProps) {
 
         isResized = true;
         hideAllSlides();
-        await sleep(1000);
+        await sleep(300);
         isResized = false;
         sliderStart().catch((e) => console.error(e));
     };
@@ -139,7 +139,7 @@ function Slider({ gap, speed }: SliderProps) {
     };
 
     const sliderStart = async () => {
-        console.log("called");
+        // console.log("called");
         if (isResized) return;
 
         let last = 0;
@@ -185,6 +185,10 @@ function Slider({ gap, speed }: SliderProps) {
     useEffect(() => {
         sliderStart().catch((e) => console.error(e));
 
+        document.addEventListener("visibilitychange", () => {
+            restart().catch((e) => console.error(e));
+        });
+
         window.onresize = () => {
             restart().catch((e) => console.error(e));
         };
@@ -203,11 +207,11 @@ function Slider({ gap, speed }: SliderProps) {
                 <div className="slider-item">
                     <div className="slider-text">
                         3000zł brutto
-                        {/* <img
+                        <img
                             src="./src/assets/ellipse.svg"
                             className="ellipse"
                             alt=""
-                        /> */}
+                        />
                     </div>
                     <div className="dot" />
                 </div>
