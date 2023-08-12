@@ -1,11 +1,24 @@
+import { scrollTo } from "../utils";
+
 function OfferSection() {
     return (
-        <section className="offer-section">
+        <section className="offer-section" id="offer">
             <div className="header">
                 <h2>Oferta</h2>
                 <div className="contact">
-                    <p>kontakt</p>
-                    <button className="arrow-btn">
+                    <p
+                        onClick={() => {
+                            scrollTo("contact");
+                        }}
+                    >
+                        kontakt
+                    </p>
+                    <button
+                        className="arrow-btn"
+                        onClick={() => {
+                            scrollTo("contact");
+                        }}
+                    >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="30"

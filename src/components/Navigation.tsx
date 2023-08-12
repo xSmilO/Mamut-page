@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { scrollTo } from "../utils";
 
 function Navigation() {
     const [openNav, setopenNav] = useState(false);
@@ -11,19 +12,72 @@ function Navigation() {
         <nav className="navigation">
             <ul>
                 <ul className="navigation-items">
-                    <li>Portfolio</li>
-                    <li>Oferta</li>
-                    <li>O nas</li>
+                    <li
+                        onClick={() => {
+                            scrollTo("portfolio");
+                        }}
+                    >
+                        Portfolio
+                    </li>
+                    <li
+                        onClick={() => {
+                            scrollTo("offer");
+                        }}
+                    >
+                        Oferta
+                    </li>
+                    <li
+                        onClick={() => {
+                            scrollTo("about");
+                        }}
+                    >
+                        O nas
+                    </li>
                 </ul>
-                <li className="contact-button">Kontakt</li>
+                <li
+                    className="contact-button"
+                    onClick={() => {
+                        scrollTo("contact");
+                    }}
+                >
+                    Kontakt
+                </li>
             </ul>
 
             <ul className={`mobile ${openNav ? "show" : ""}`}>
                 <ul className="navigation-items">
-                    <li>Portfolio</li>
-                    <li>Oferta</li>
-                    <li>O nas</li>
-                    <li>Kontakt</li>
+                    <li
+                        onClick={() => {
+                            changeNav();
+                            scrollTo("portfolio");
+                        }}
+                    >
+                        Portfolio
+                    </li>
+                    <li
+                        onClick={() => {
+                            changeNav();
+                            scrollTo("offer");
+                        }}
+                    >
+                        Oferta
+                    </li>
+                    <li
+                        onClick={() => {
+                            changeNav();
+                            scrollTo("about");
+                        }}
+                    >
+                        O nas
+                    </li>
+                    <li
+                        onClick={() => {
+                            changeNav();
+                            scrollTo("contact");
+                        }}
+                    >
+                        Kontakt
+                    </li>
                 </ul>
             </ul>
             <div

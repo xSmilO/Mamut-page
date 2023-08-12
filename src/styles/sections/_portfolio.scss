@@ -91,7 +91,9 @@
                 box-shadow: -40px 50px 63px -24px rgba(0, 0, 0, 0.8);
                 transform-origin: center;
 
-                animation: waving 5s ease-in-out infinite alternate;
+                // animation: waving 5s ease-in-out infinite alternate;
+                transition: all 1s ease;
+                transform: translate(0, 70%);
 
                 @include mq(medium) {
                     width: max(50%, 16rem);
@@ -108,6 +110,29 @@
                 min-height: auto;
                 z-index: -1;
                 overflow: visible;
+            }
+        }
+
+        &.show {
+            .image {
+                img {
+                    // transform: translate(0, 0) rotate(-16deg);
+                    // animation: waving 5s ease-in-out infinite alternate;
+                    animation-name: slideIn, waving;
+                    animation-duration: 1s, 5s;
+                    animation-delay: 0s, 2s;
+                    animation-timing-function: cubic-bezier(
+                            0.47,
+                            1.64,
+                            0.41,
+                            0.8
+                        ),
+                        ease-in-out;
+                    animation-direction: normal, alternate;
+                    animation-iteration-count: 1, infinite;
+                    animation-fill-mode: forwards, none;
+                    // animation-delay: 3s;
+                }
             }
         }
 
@@ -151,6 +176,7 @@
                 }
 
                 button {
+                    cursor: pointer;
                     background-color: transparent;
                     outline: none;
                     border: 1px solid $dark-100;
@@ -162,6 +188,7 @@
                     // font-size: 1.25em;
                     font-size: min(1.25em, 1.25vw);
                     font-weight: 400;
+                    transition: background-color 500ms ease;
 
                     @include mq(small) {
                         font-size: min(2em, 2vw);
@@ -171,6 +198,10 @@
                         @include mq(small) {
                             width: 2em;
                         }
+                    }
+
+                    &:hover {
+                        background-color: $accent-purple;
                     }
                 }
             }
@@ -194,5 +225,15 @@
 
     100% {
         transform: translate(0, 2em) rotate(-16deg);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translate(0, 70%) rotate(-16deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(-16deg);
     }
 }

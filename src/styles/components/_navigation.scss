@@ -78,6 +78,27 @@
 
     .navigation-items {
         gap: 4em;
+
+        li {
+            cursor: pointer;
+            position: relative;
+            padding: 0.5em;
+            &::after {
+                content: "";
+                width: 100%;
+                height: 2px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-color: $dark-100;
+                transition: transform 300ms ease;
+                transform: scale(0);
+            }
+
+            &:hover::after {
+                transform: scale(1);
+            }
+        }
     }
 
     .contact-button {

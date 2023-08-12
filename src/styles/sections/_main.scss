@@ -31,13 +31,17 @@
             }
         }
 
+        @include mq(medium) {
+            padding: 2em $sections-padding-x-medium;
+        }
+
         @include mq(small) {
             padding: 2em $sections-padding-x-small;
         }
     }
 
     section {
-        padding: 0 $sections-padding-x;
+        padding: 3em $sections-padding-x;
         color: $light-90;
         min-height: calc(100vh - 35em);
         background-color: $dark-100;
@@ -51,6 +55,10 @@
             font-size: 5rem;
             letter-spacing: -0.1375rem;
             font-weight: 400;
+
+            @include mq(medium) {
+                font-size: 3.5em;
+            }
 
             @include mq(small) {
                 font-size: 3em;
@@ -100,6 +108,10 @@
                     display: none;
                 }
             }
+        }
+
+        @include mq(medium) {
+            padding: $sections-padding-x-medium;
         }
 
         @include mq(small) {

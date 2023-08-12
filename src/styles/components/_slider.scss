@@ -14,7 +14,7 @@
         display: flex;
         align-items: center;
         height: 7em;
-        gap: 3rem;
+        gap: 4rem;
         position: absolute;
         background-color: transparent;
 
@@ -25,7 +25,7 @@
         .slider-item {
             display: flex;
             align-items: center;
-            gap: 3rem;
+            gap: 4rem;
             min-width: max-content;
             color: $dark-100;
             text-transform: uppercase;
@@ -34,8 +34,8 @@
             position: relative;
 
             .dot {
-                width: 10px;
-                height: 10px;
+                width: 5px;
+                height: 5px;
                 border-radius: 100%;
                 background-color: $dark-100;
 
@@ -55,6 +55,9 @@
                 position: absolute;
                 top: 0;
                 left: 0;
+                transform: translate(-1em, -1em);
+                width: 5em;
+                aspect-ratio: 2/1;
             }
         }
 
